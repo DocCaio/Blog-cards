@@ -5,7 +5,7 @@ const Formulario = () => {
     return (
         <div className="formulario">
             <label>Nome</label>
-            <input/>
+            <input placeholder='Digite seu nome' />
         </div>
     )
 
