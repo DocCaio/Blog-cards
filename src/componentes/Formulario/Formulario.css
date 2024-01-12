@@ -1,0 +1,9 @@
+.formulario {
+    margin: 1.5rem 0;
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+}
