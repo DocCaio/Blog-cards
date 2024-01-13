@@ -1,11 +1,11 @@
 import './Formulario.css';
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     return (
         <div className="formulario">
-            <label>Nome</label>
-            <input placeholder='Digite seu nome' />
+            <label>{props.label}</label>
+            <input placeholder={props.placeholder} />
         </div>
     )
 
