@@ -1,11 +1,11 @@
-import './CampoTexto.css'
+import './Campo.css'
 
-const CampoTexto = (props) => {
+const Campo = (props) => {
 
     const placeholderModificada = `${props.placeholder}...` 
 
     return (
-        <div className="campo-texto">
+        <div className="campo">
             <label>
                 {props.label}
             </label>
@@ -14,4 +14,4 @@ const CampoTexto = (props) => {
     )
 }
 
-export default CampoTexto;
+export default Campo;

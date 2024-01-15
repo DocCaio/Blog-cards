@@ -1,4 +1,4 @@
-import CampoTexto from '../CampoTexto'
+import Campo from '../Campo'
 import './Formulario.css'
 
 const Formulario = () => {
@@ -6,9 +6,9 @@ const Formulario = () => {
         <section className="formulario">
             <form>
                 <h2>Preencha os dados e escolha um assunto</h2>
-                <CampoTexto label="Nome" placeholder="Digite seu nome" />
-                <CampoTexto label="Assunto" placeholder="Digite o assunto" />
-                <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem" />
+                <Campo label="Nome" placeholder="Digite seu nome" />
+                <Campo label="Assunto" placeholder="Digite o assunto" />
+                <Campo label="Imagem" placeholder="Digite o endereço da imagem" />
             </form>
         </section>
     )
