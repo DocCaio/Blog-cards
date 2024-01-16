@@ -15,15 +15,20 @@ const Formulario = () => {
        'Cultura POP'
     ];
 
+    const aoSalvar = (evento) => { 
+        evento.preventDefault()
+        console.log('Form foi submetido')
+    }
+
     return (
         <section className="formulario">
-            <form>
+            <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados e escolha um assunto</h2>
-                <Campo label="Nome" placeholder="Digite seu nome" />
-                <Campo label="Assunto" placeholder="Digite o assunto" />
+                <Campo obrigatorio={true} label="Nome" placeholder="Digite seu nome" />
+                <Campo obrigatorio={true} label="Assunto" placeholder="Digite o assunto" />
                 <Campo label="Imagem" placeholder="Digite o endereço da imagem" />
                 <Categorias obrigatorio={true} label="Time" itens={times}/>
-                <Botao texto="Enviar"/>
+                <Botao>Enviar</Botao>
                
             </form>
         </section>
