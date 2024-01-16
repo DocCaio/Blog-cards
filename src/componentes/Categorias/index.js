@@ -1,12 +1,10 @@
-import './Categorias.css';
+import './Categorias.css'
 
-
-const Categorias = (props) => {    
-
+const Categorias = (props) => {
     return (
         <div className='categorias'>
             <label>{props.label}</label>
-            <select required={props.required}>
+            <select onChange={evento => props.aoAlterado(evento.target.value)} required={props.required} value={props.value}>
                 {props.itens.map(item => {
                     return <option key={item}>{item}</option>
                 })}
@@ -15,8 +13,4 @@ const Categorias = (props) => {
     )
 }
 
-
 export default Categorias;
-
-
-     /*{props.itens.map(item => <option>{item}</option>)}*/
