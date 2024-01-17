@@ -14,7 +14,8 @@ const Formulario = (props) => {
         'Política',
         'Tecnologia',
         'Saude',
-        'Educação'
+        'Educação',
+        'Financeiro'
     ]
 
     const [nome, setNome] = useState('')
@@ -46,7 +47,7 @@ const Formulario = (props) => {
                 <Campo
                     obrigatorio={true}
                     label="Mensagem"
-                    maxlength="500"
+                    maxLength="500"
                     placeholder="Digite sua mensagem" 
                     valor={cargo}
                     aoAlterado={valor => setCargo(valor)}
