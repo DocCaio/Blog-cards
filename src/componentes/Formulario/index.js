@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import Botao from '../Botao'
-import CampoTexto from '../Campo'
-import './Formulario.css'
-import Categorias from '../Categorias'
-import Campo from '../Campo'
+import { useState } from 'react';
+import Botao from '../Botao';
+import Campo from '../Campo';
+import './Formulario.css';
+import Categorias from '../Categorias';
+
 
 const Formulario = (props) => {
 
@@ -36,16 +36,17 @@ const Formulario = (props) => {
         <section className="formulario">
             <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <CampoTexto 
+                <Campo 
                     obrigatorio={true}
                     label="Nome"
                     placeholder="Digite seu nome" 
                     valor={nome}
                     aoAlterado={valor => setNome(valor)}
                 />
-                <CampoTexto
+                <Campo
                     obrigatorio={true}
                     label="Mensagem"
+                    maxlength="500"
                     placeholder="Digite sua mensagem" 
                     valor={cargo}
                     aoAlterado={valor => setCargo(valor)}
@@ -71,4 +72,4 @@ const Formulario = (props) => {
     )
 }
 
-export default Formulario
+export default Formulario;
