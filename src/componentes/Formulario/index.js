@@ -61,10 +61,11 @@ const Formulario = (props) => {
                 <Categorias
                     obrigatorio={true}
                     label="Categorias" 
-                    itens={categorias}
+                    itens={props.comentarios}
                     valor={categoria}
                     aoAlterado={valor => setTime(valor)}
                 />
+                
                 <Botao>
                     Criar Card
                 </Botao>

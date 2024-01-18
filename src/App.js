@@ -3,13 +3,6 @@ import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Cards from './componentes/Cards';
 
-
-
-
-
-
-
-
 function App() {
 
   const cards = [
@@ -60,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
+      <Formulario comentarios={cards.map(cards =>   cards.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
       {cards.map(cards => <Cards key={cards.nome} nome={cards.nome} corPrimaria={cards.corPrimaria} corSecundaria={cards.corSecundaria}/>)}
 
     
