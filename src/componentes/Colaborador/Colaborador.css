@@ -1,0 +1,68 @@
+:root{
+    /*Color*/
+    --yellowColor: hsl(47, 88%, 63%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --greyColor: hsl(0, 0%, 50%);
+    --blackColor: hsl(0, 0%, 7%);
+
+    /*Fonts*/
+    --primaryFont: 'Figtree', sans-serif;
+}
+
+
+img{
+    max-width: 100%;
+}
+.card{
+    width: 390px;
+    background: var(--whiteColor);
+    border: 2px groove var(--greyColor);
+    border-radius: 18px;
+    box-shadow: 10px 10px var(--blackColor);
+}
+.card-image{
+    margin: 25px;
+}
+.card-image img{
+    display: block;
+    margin: 0 auto;
+    border-radius: 14px;
+}
+.card-body{
+    margin: 25px;
+}
+.card-body h4{
+    background: var(--yellowColor);
+    padding: 7px 10px;
+    color: var(--blackColor);
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px;
+}
+.card-body h6{
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.card-body article h2{
+    color: var(--blackColor);
+}
+.card-body article p{
+    color: var(--greyColor);
+    line-height: 1.5em;
+    margin-bottom: 25px;
+}
+.author a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.author a img{
+    width: 30px;
+}
+.author a span{
+    color: var(--blackColor);
+    font-weight: 800;
+    margin-left: 10px;
+
+}

@@ -1,3 +1,4 @@
+import Colaborador from '../Colaborador';
 import './Cards.css';
 
 const Cards = (props) => {
@@ -5,7 +6,7 @@ const Cards = (props) => {
     return (
         <section className='cards' style={css}>
             <h3 style={{borderColor:props.corPrimaria}}>{props.nome}</h3>
-
+            <Colaborador/>
         </section>
     )
 }
