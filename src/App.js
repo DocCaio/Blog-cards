@@ -1,69 +1,68 @@
 import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
-import Cards from './componentes/Cards';
+import Time from './componentes/Cards';
 
 function App() {
 
-  const cards = [
+  const times = [
     {
       nome: 'Esportes',
-      corPrimaria: ' hsl(47, 88%, 63%)',
-      corSecundaria: ' hsl(0, 0%, 50%)',
+      corPrimaria: ' hsl(0, 0%, 50%)',
+      corSecundaria: 'hsl(47, 88%, 63%)',
   },
   {
       nome: 'Culinária',
-      corPrimaria: ' hsl(47, 88%, 63%)',
-      corSecundaria: ' hsl(0, 0%, 50%)',
+      corPrimaria: ' hsl(0, 0%, 50%)',
+      corSecundaria: 'hsl(47, 88%, 63%)'
   },
   {
       nome: 'Política',
-      corPrimaria: ' hsl(47, 88%, 63%)',
-      corSecundaria: ' hsl(0, 0%, 50%)',
+      corPrimaria: ' hsl(0, 0%, 50%)',
+      corSecundaria: 'hsl(47, 88%, 63%)',
   },
   {
       nome: 'Tecnologia',
-      corPrimaria: ' hsl(47, 88%, 63%)',
-      corSecundaria: ' hsl(0, 0%, 50%)',
+      corPrimaria: ' hsl(0, 0%, 50%)',
+      corSecundaria: 'hsl(47, 88%, 63%)',
   },
   {
       nome: 'Saude',
-      corPrimaria: ' hsl(47, 88%, 63%)',
-      corSecundaria: ' hsl(0, 0%, 50%)',
+      corPrimaria: ' hsl(0, 0%, 50%)',
+      corSecundaria: 'hsl(47, 88%, 63%)',
   },
   {
       nome: 'Educação',
-      corPrimaria: ' hsl(47, 88%, 63%)',
-      corSecundaria: ' hsl(0, 0%, 50%)',
+      corPrimaria: ' hsl(0, 0%, 50%)',
+      corSecundaria: 'hsl(47, 88%, 63%)',
   },
   {
       nome: 'Financeiro',
-      corPrimaria: ' hsl(47, 88%, 63%)',
-      corSecundaria: ' hsl(0, 0%, 50%)',
+      corPrimaria: ' hsl(0, 0%, 50%)',
+      corSecundaria: 'hsl(47, 88%, 63%)',
   }
   ]
 
   const [colaboradores, setColaboradores] = useState([])
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador)
+    debugger
     setColaboradores([...colaboradores, colaborador])
   }
 
   return (
     <div className="App">
       <Banner />
-      <Formulario comentarios={cards.map(cards =>   cards.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
-      {cards.map(cards => <Cards 
-      key={cards.nome} 
-      nome={cards.nome} 
-      corPrimaria={cards.corPrimaria}
-      corSecundaria={cards.corSecundaria}
-      colaborador={colaboradores}
-      />)}
+      <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
 
-    
-              
+      {times.map(time => <Time 
+        key={time.nome} 
+        nome={time.nome} 
+        corPrimaria={time.corPrimaria} 
+        corSecundaria={time.corSecundaria} 
+        colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+      />)}   
+
     </div>
   );
 }

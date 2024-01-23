@@ -1,27 +1,15 @@
-import { useState } from 'react';
-import Botao from '../Botao';
-import Campo from '../Campo';
-import './Formulario.css';
-import Categorias from '../Categorias';
-
+import { useState } from 'react'
+import Botao from '../Botao'
+import './Formulario.css'
+import Categorias from '../Categorias'
+import Campo from '../Campo'
 
 const Formulario = (props) => {
-
-    const categorias = [
-        'Esporte',
-        'Culinária',
-        'Cultura POP',
-        'Política',
-        'Tecnologia',
-        'Saude',
-        'Educação',
-        'Financeiro'
-    ]
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
-    const [categoria, setTime] = useState('')
+    const [time, setTime] = useState('')
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
@@ -29,15 +17,19 @@ const Formulario = (props) => {
             nome,
             cargo,
             imagem,
-            categoria
+            time
         })
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
                 <h2>Preencha os dados para criar o card do colaborador</h2>
-                <Campo 
+                <Campo
                     obrigatorio={true}
                     label="Nome"
                     placeholder="Digite seu nome" 
@@ -46,9 +38,8 @@ const Formulario = (props) => {
                 />
                 <Campo
                     obrigatorio={true}
-                    label="Mensagem"
-                    maxLength="500"
-                    placeholder="Digite sua mensagem" 
+                    label="Cargo"
+                    placeholder="Digite seu cargo" 
                     valor={cargo}
                     aoAlterado={valor => setCargo(valor)}
                 />
@@ -60,12 +51,11 @@ const Formulario = (props) => {
                 />
                 <Categorias
                     obrigatorio={true}
-                    label="Categorias" 
-                    itens={props.comentarios}
-                    valor={categoria}
+                    label="Time" 
+                    itens={props.times}
+                    valor={time}
                     aoAlterado={valor => setTime(valor)}
                 />
-                
                 <Botao>
                     Criar Card
                 </Botao>

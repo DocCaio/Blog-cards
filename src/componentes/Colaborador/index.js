@@ -1,22 +1,22 @@
 import './Colaborador.css';
 
-const Colaborador = () => {
+const Colaborador = ({ nome, imagem, mensagem, corDeFundo }) => {
     return (
         <main className="card">
-    <section className="card-image">
+    <section className="card-image" style={{ backgroundColor: corDeFundo }}>
     <img src="/imagens/illustration-article.svg" alt="This is a blog image"/>
     </section>
     <section className="card-body">
-      <h4>Learning</h4>
-      <h6>Published 21 Dec 2023</h6>
+      <h4>Comentario</h4>
+      <h6>Publicado</h6>
       <article>
         <h2>HTML & CSS foundations</h2>
-        <p>These languages are the backbone of every website, defining structure content, and presentation.</p>
+        <p>{mensagem}</p>
       </article>
       <div class="author">
         <a href="#">
-            <img src="/imagens/image-avatar.webp" alt="This is an author pic"/>
-                <span>Greg Hooper</span>
+        <img src={imagem} alt={nome}/>
+                <span>{nome}</span>
             </a>
       </div>
     </section>

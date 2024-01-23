@@ -1,4 +1,4 @@
-import './Campo.css';
+import './Campo.css'
 
 const Campo = (props) => {
 
@@ -13,7 +13,7 @@ const Campo = (props) => {
             <label>
                 {props.label}
             </label>
-            <input value={props.valor} onChange={aoDigitado} maxlength="200" required={props.obrigatorio} placeholder={placeholderModificada}/>
+            <input value={props.valor} onChange={aoDigitado} required={props.obrigatorio} placeholder={placeholderModificada}/>
         </div>
     )
 }
