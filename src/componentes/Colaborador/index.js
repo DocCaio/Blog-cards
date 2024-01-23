@@ -4,7 +4,7 @@ const Colaborador = () => {
     return (
         <main className="card">
     <section className="card-image">
-      <img src="public/images/illustration-article.svg" alt="This is a blog image"/>
+    <img src="/imagens/illustration-article.svg" alt="This is a blog image"/>
     </section>
     <section className="card-body">
       <h4>Learning</h4>
@@ -15,7 +15,7 @@ const Colaborador = () => {
       </article>
       <div class="author">
         <a href="#">
-            <img src="public/images/image-avatar.webp" alt="This is an author pic"/>
+            <img src="/imagens/image-avatar.webp" alt="This is an author pic"/>
                 <span>Greg Hooper</span>
             </a>
       </div>

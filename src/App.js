@@ -54,7 +54,13 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario comentarios={cards.map(cards =>   cards.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
-      {cards.map(cards => <Cards key={cards.nome} nome={cards.nome} corPrimaria={cards.corPrimaria} corSecundaria={cards.corSecundaria}/>)}
+      {cards.map(cards => <Cards 
+      key={cards.nome} 
+      nome={cards.nome} 
+      corPrimaria={cards.corPrimaria}
+      corSecundaria={cards.corSecundaria}
+      colaborador={colaboradores}
+      />)}
 
     
               
