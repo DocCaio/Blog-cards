@@ -59,6 +59,7 @@ img{
 }
 .author a img{
     width: 30px;
+    border-radius: 20px;
 }
 .author a span{
     color: var(--blackColor);

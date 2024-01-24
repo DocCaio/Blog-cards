@@ -28,7 +28,7 @@ const Formulario = (props) => {
     return (
         <section className="formulario">
             <form onSubmit={aoSalvar}>
-                <h2>Preencha os dados para criar o card do colaborador</h2>
+                <h2>Faça seu comentário e escolha um assunto</h2>
                 <Campo
                     obrigatorio={true}
                     label="Nome"
@@ -38,8 +38,8 @@ const Formulario = (props) => {
                 />
                 <Campo
                     obrigatorio={true}
-                    label="Cargo"
-                    placeholder="Digite seu cargo" 
+                    label="Mensagem"
+                    placeholder="Digite sua mensagem" 
                     valor={cargo}
                     aoAlterado={valor => setCargo(valor)}
                 />
@@ -51,13 +51,13 @@ const Formulario = (props) => {
                 />
                 <Categorias
                     obrigatorio={true}
-                    label="Time" 
+                    label="Categorias" 
                     itens={props.times}
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
                 />
                 <Botao>
-                    Criar Card
+                    Enviar
                 </Botao>
             </form>
         </section>
