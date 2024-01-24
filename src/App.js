@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
-import Time from './componentes/Cards';
+import Categorias from './componentes/Cards';
+import Cards from './componentes/Cards';
 
 function App() {
 
@@ -55,7 +56,7 @@ function App() {
       <Banner />
       <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
 
-      {times.map(time => <Time 
+      {times.map(time => <Cards
         key={time.nome} 
         nome={time.nome} 
         corPrimaria={time.corPrimaria} 
