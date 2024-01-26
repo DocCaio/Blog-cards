@@ -4,7 +4,7 @@ import './Colaborador.css';
 const Colaborador = ({ nome, imagem, cargo, corDeFundo, aoDeletar }) => {
     return (
         <main className="card">
-          <FaTrashAlt  className="deletar" onClick={aoDeletar}/>
+          <FaTrashAlt size={25}  className="deletar" onClick={aoDeletar}/>
     <section className="card-image" style={{ backgroundColor: corDeFundo }}>
     <img src="/imagens/illustration-article.svg" alt="This is a blog image"/>
     </section>
