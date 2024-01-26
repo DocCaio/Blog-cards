@@ -19,6 +19,13 @@ img{
     border: 2px groove var(--greyColor);
     border-radius: 18px;
     box-shadow: 10px 10px var(--blackColor);
+    position: relative;
+}
+
+.deletar {
+    position: absolute;
+    right: -10px;
+    top: -10px;
 }
 .card-image{
     margin: 25px;
