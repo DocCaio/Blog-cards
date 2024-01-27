@@ -6,4 +6,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
+h1 {
+  font-size: 40px;
+  color:hsl(0, 0%, 50%);
+  border-bottom: 4px solid #6278F7;
+  display: inline-block;
+  padding-bottom: 24px;
+  margin: 32px 0;  
+}
