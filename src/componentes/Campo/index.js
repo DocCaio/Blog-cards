@@ -1,4 +1,4 @@
-import './Campo.css'
+import './Campo.css';
 
 const Campo = (props) => {
 

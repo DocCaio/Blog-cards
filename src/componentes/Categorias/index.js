@@ -1,4 +1,4 @@
-import './Categorias.css'
+import './Categorias.css';
 
 const Categorias = (props) => {
     return (
