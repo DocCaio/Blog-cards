@@ -73,6 +73,7 @@ function App() {
       </div>
       {times.map(time =>       
       <Cards
+        mudarCor={mudarCorTime}
         key={time.nome} 
         nome={time.nome} 
         corPrimaria={time.corPrimaria} 
