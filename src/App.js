@@ -6,7 +6,7 @@ import Rodape from './componentes/Rodape';
 
 function App() {
 
-  const times = [
+  const [times, setTimes] = useState([
     {
       nome: 'Esportes',
       corPrimaria: 'hsl(47, 88%, 63%)',
@@ -42,7 +42,7 @@ function App() {
       corPrimaria: 'hsl(47, 88%, 63%)',
       corSecundaria: 'hsl(0, 0%, 50%)',
   }
-  ]
+  ]);
 
   const [colaboradores, setColaboradores] = useState([])
 
@@ -54,7 +54,15 @@ function App() {
   function deletarColaborador() {
     console.log('deletando colaborador');
   }
+  
+  function mudarCorTime(cor, nome) {
+    setTimes(times.map(time => {
+      if(time.nome === nome) {
+        time.corSecundaria = cor;
+      }
+    }))
 
+  }
   return (
     <div className="App">
       <Banner />
