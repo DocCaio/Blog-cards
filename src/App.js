@@ -3,26 +3,31 @@ import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
 import Cards from './componentes/Cards';
 import Rodape from './componentes/Rodape';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
   const [times, setTimes] = useState([
     {
+      id:uuidv4(),
       nome: 'Esportes',
       corPrimaria: 'hsl(47, 88%, 63%)',
       corSecundaria: 'hsl(0, 0%, 50%)',
   },
-  {
+  {   
+      id:uuidv4(),
       nome: 'Culinária',
       corPrimaria: 'hsl(47, 88%, 63%)',
       corSecundaria: 'hsl(0, 0%, 50%)',
   },
-  {
+  {   
+      id:uuidv4(),
       nome: 'Política',
       corPrimaria: 'hsl(47, 88%, 63%)',
       corSecundaria: 'hsl(0, 0%, 50%)',
   },
   {
+      id:uuidv4(),
       nome: 'Tecnologia',
       corPrimaria: 'hsl(47, 88%, 63%)',
       corSecundaria: 'hsl(0, 0%, 50%)',
@@ -38,6 +43,7 @@ function App() {
       corSecundaria: 'hsl(0, 0%, 50%)',
   },
   {
+      id:uuidv4(),
       nome: 'Financeiro',
       corPrimaria: 'hsl(47, 88%, 63%)',
       corSecundaria: 'hsl(0, 0%, 50%)',
@@ -55,9 +61,9 @@ function App() {
     console.log('deletando colaborador');
   }
   
-  function mudarCorTime(cor, nome) {
+  function mudarCorTime(cor, id) {
     setTimes(times.map(time => {
-      if(time.nome === nome) {
+      if(time.id === id) {
         time.corSecundaria = cor;
       }
     }))
