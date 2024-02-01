@@ -33,11 +33,13 @@ function App() {
       corSecundaria: 'hsl(0, 0%, 50%)',
   },
   {
+      id:uuidv4(),
       nome: 'Saude',
       corPrimaria: 'hsl(47, 88%, 63%)',
       corSecundaria: 'hsl(0, 0%, 50%)',
   },
-  {
+  {   
+      id:uuidv4(),
       nome: 'Educação',
       corPrimaria: 'hsl(47, 88%, 63%)',
       corSecundaria: 'hsl(0, 0%, 50%)',
