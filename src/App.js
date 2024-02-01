@@ -59,8 +59,8 @@ function App() {
     setColaboradores([...colaboradores, colaborador])
   }
 
-  function deletarColaborador() {
-    console.log('deletando colaborador');
+  function deletarColaborador(id) {
+    setColaboradores(colaboradores.filter(colaborador => colaborador.id != id));
   }
   
   function mudarCorTime(cor, id) {
@@ -74,8 +74,10 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario times={times.map(time => time.nome)} 
-      aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
+      <Formulario
+       times={times.map(time => time.nome)} 
+      aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}
+      />
       <div className='text'>
       <h1>Comentários</h1>
       </div>

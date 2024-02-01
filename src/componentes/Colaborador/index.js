@@ -1,10 +1,14 @@
 import { FaTrashAlt } from "react-icons/fa";
 import './Colaborador.css';
 
-const Colaborador = ({ nome, imagem, cargo, corDeFundo, aoDeletar }) => {
+const Colaborador = ({ nome, imagem, cargo, corDeFundo, aoDeletar  , colaborador}) => {
     return (
         <main className="card">
-          <FaTrashAlt size={25}  className="deletar" onClick={aoDeletar}/>
+          <FaTrashAlt
+           size={25}  
+           className="deletar" 
+           onClick={() => aoDeletar(colaborador.id)}
+           />
     <section className="card-image" style={{ backgroundColor: corDeFundo }}>
     <img src="/imagens/illustration-article.svg" alt="This is a blog image"/>
     </section>
