@@ -1,67 +1,68 @@
-import { useState } from 'react'
-import Botao from '../Botao'
-import './Formulario.css'
-import Categorias from '../Categorias'
-import Campo from '../Campo'
+import { useState } from 'react';
+import Botao from '../Botao';
+import Campo from '../Campo';
+import ListaSuspensa from '../ListaSuspensa';
+import './Formulario.css';
 
-const Formulario = (props) => {
+const Formulario = ({ aoCadastrar, times, aoCriarTime }) => {
 
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')
+    const [nomeTime, setNomeTime] = useState('')
+    const [corTime, setCorTime] = useState('')
 
-    const aoSalvar = (evento) => {
+    const aoSubmeter = (evento) => {
         evento.preventDefault()
-        props.aoColaboradorCadastrado({
+        console.log('form enviado', nome, cargo, imagem, time )
+        aoCadastrar({
             nome,
             cargo,
             imagem,
             time
         })
-        setNome('')
-        setCargo('')
-        setImagem('')
-        setTime('')
     }
 
     return (
-        <section className="formulario">
-            <form onSubmit={aoSalvar}>
-                <h2>Faça seu comentário e escolha um assunto</h2>
+        <section className="formulario-container">
+            <form className="formulario" onSubmit={aoSubmeter}>
+                <h2>Preencha os dados para comentar.</h2>
                 <Campo
                     obrigatorio={true}
-                    label="Nome"
-                    placeholder="Digite seu nome" 
+                    label='Nome'
+                    placeholder='Digite seu nome '
                     valor={nome}
-                    aoAlterado={valor => setNome(valor)}
-                />
+                    aoAlterado={valor => setNome(valor)}/>
                 <Campo
                     obrigatorio={true}
-                    label="Mensagem"
-                    placeholder="Digite sua mensagem" 
+                    label='Comentário' 
+                    placeholder='Digite seu comentário '
                     valor={cargo}
-                    aoAlterado={valor => setCargo(valor)}
-                />
+                    aoAlterado={valor => setCargo(valor)}/>
+                <Campo 
+                    label='Imagem' 
+                    placeholder='Informe o endereço da imagem '
+                    aoAlterado={valor => setImagem(valor)}/>
                 <Campo
-                    label="Imagem"
-                    placeholder="Digite o endereço da imagem" 
-                    valor={imagem}
-                    aoAlterado={valor => setImagem(valor)}
-                />
-                <Categorias
                     obrigatorio={true}
-                    label="Categorias" 
-                    itens={props.times}
+                    label='Cor'
+                    type='color'
+                    placeholder='Digite sua cor'
+                    valor={corTime}
+                    aoAlterado={valor => setCorTime(valor)}/>
+                <ListaSuspensa 
+                    obrigatorio={true}
+                    label='Categoria'
+                    items={times} 
                     valor={time}
-                    aoAlterado={valor => setTime(valor)}
-                />
-                <Botao>
-                    Enviar
-                </Botao>
+                    aoAlterado={valor => setTime(valor)}/>
+                <Botao texto='Enviar' />
             </form>
+            
+         
         </section>
     )
 }
 
-export default Formulario;
+export default Formulario

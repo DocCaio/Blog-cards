@@ -1,6 +1,5 @@
 
-import './Rodape.css'
-
+import './Rodape.css';
 
 const Rodape = () => {
     return (<footer className="footer">
@@ -28,10 +27,10 @@ const Rodape = () => {
        </section>
        <section>
         <p>
-            Desenvolvido por CaioDev.
+            Desenvolvido por Caio.
         </p>
        </section>
     </footer>)
 }
 
-export default Rodape 
+export default Rodape

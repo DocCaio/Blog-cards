@@ -18,6 +18,7 @@ const Cards = (props , mudarCor) => {
                     cargo={colaborador.cargo}
                     imagem={colaborador.imagem} aoDeletar={props.aoDeletar}/>
                 } )}
+                
             </div>
         </section> 
         : ''

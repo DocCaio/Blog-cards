@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,600;0,800;1,600;1,800&display=swap');
+
 body {
   margin: 0;
   font-family: 'Figtree', sans-serif;
@@ -7,6 +8,10 @@ body {
 }
 
 .text {
+  text-align: center;
+}
+
+.times {
   text-align: center;
 }
 
