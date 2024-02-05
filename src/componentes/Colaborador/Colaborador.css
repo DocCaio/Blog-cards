@@ -17,16 +17,16 @@
 
 
 .card {
-    width: 390px;
+    width: 340px;
     background: var(--whiteColor);
     border: 2px groove var(--greyColor);
     border-radius: 18px;
     box-shadow: 10px 10px var(--blackColor);
     position: relative;
-    padding-top: 1rem;
+   padding: 1rem;
 }
 
-.card-image img {
+.card-image img {   
     border-radius: 10px;
 }
 
@@ -80,8 +80,9 @@
 
 
 @media (min-width: 375px) {
-    .card {
-     max-width: 100%; 
+    .card {             
+      margin-top: 1rem;
+      max-width: 100%; 
     }
 
     .card-image img {
