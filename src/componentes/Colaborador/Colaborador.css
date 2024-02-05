@@ -1,4 +1,4 @@
-:root{
+:root {
     /*Color*/
     --yellowColor: hsl(47, 88%, 63%);
     --whiteColor: hsl(0, 0%, 100%);
@@ -16,7 +16,7 @@
 }
 
 
-.card{
+.card {
     width: 390px;
     background: var(--whiteColor);
     border: 2px groove var(--greyColor);
@@ -26,11 +26,18 @@
     padding-top: 1rem;
 }
 
-.card-image img  {
+.card-image img {
     border-radius: 10px;
 }
 
-.card-body h4{
+.card-body {
+    display: inline-flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+.card-body h4 {
     background: var(--yellowColor);
     padding: 7px 10px;
     color: var(--blackColor);
@@ -39,23 +46,26 @@
     border-radius: 5px;
 }
 
-.card-body p {
-    font-size: 14px;
+ p {
+    font-size: 18px;
     font-weight: 600;
     margin-bottom: 25px;
 }
+
 .colaborador img {
     width: 50px;
     border-radius: 50%;
     position: relative;
-    
+
 }
 
 
 
 .rodape {
     display: inline-flex;
-    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+
 }
 
 .deletar {

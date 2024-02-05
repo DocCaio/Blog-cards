@@ -6,9 +6,9 @@ const Colaborador = ({ colaborador, corDeFundo, aoDeletar, aoFavoritar, aoDeslik
         aoFavoritar(colaborador.id);
     }
 
-    function deslike() {
+   /* function deslike() {
         aoDeslike(colaborador.id);
-    }
+    }*/
     return (
         <main className="card">
               <AiFillCloseCircle size={25}
@@ -24,11 +24,15 @@ const Colaborador = ({ colaborador, corDeFundo, aoDeletar, aoFavoritar, aoDeslik
         
     
         <div className="card-body">
+
         <img src={colaborador.imagem} alt={colaborador.nome} />
             <h4>{colaborador.nome}</h4>
-            <p>{colaborador.cargo}</p>
+          
 
-            <div className="rodape">
+            </div>
+            <p>{colaborador.cargo}</p>
+            
+            <div className="rodape">    
            
 
             
@@ -37,16 +41,14 @@ const Colaborador = ({ colaborador, corDeFundo, aoDeletar, aoFavoritar, aoDeslik
                  ? <AiFillLike color="blue" size={25} onClick={favoritar} />
                  : <AiOutlineLike size={25} onClick={favoritar} />}
 
-           {colaborador.desgosto
-                 ? <AiFillDislike color="red" size={25} onClick={deslike} />
-                 : <AiOutlineDislike size={25} onClick={deslike} />}
+        
                 
 
         </div>
             
                
            
-        </div>
+      
 
     </div>
     </main>)
