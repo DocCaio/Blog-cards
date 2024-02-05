@@ -16,3 +16,9 @@
     margin-right: 0;
 }
 
+@media (min-width: 375px) {
+    .footer {
+      display: flex;
+      flex-direction: column;
+    }
+}  

@@ -77,3 +77,14 @@
 .favorito {
     margin-top: 20px;
 }
+
+
+@media (min-width: 375px) {
+    .card {
+     max-width: 100%; 
+    }
+
+    .card-image img {
+        width: 100%;
+    }
+}  
